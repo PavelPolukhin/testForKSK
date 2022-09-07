@@ -1,0 +1,21 @@
+@import "../vars";
+@import "../mixins";
+
+.form{
+  &__input{
+    &-title{
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: #000000;
+      margin-bottom: 4px;
+    }
+  }
+  .v-input{
+   @include inputMixin;
+  }
+  .form__input + .form__input{
+    margin-top: 16px;
+  }
+}

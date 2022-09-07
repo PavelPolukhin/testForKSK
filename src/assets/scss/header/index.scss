@@ -1,0 +1,10 @@
+@import "../vars";
+@import "../mixins";
+
+.header{
+  height: 260px;
+  background: $header-gradient;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

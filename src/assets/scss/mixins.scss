@@ -1,0 +1,75 @@
+@import "vars";
+@mixin inputMixin(){
+  padding: 0;
+  margin: 0;
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  border-radius: 2px;
+  outline: none;
+  input{
+    padding: 8px 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    width: auto;
+  }
+  .v-label{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $input-label-color;
+    left: 0!important;
+    padding-left: 12px;
+  }
+  .v-text-field__slot{
+    align-items: center;
+    width: auto;
+    max-width: 100%;
+  }
+  .v-label--active{
+    display: none;
+  }
+  .v-text-field__details{
+    display: none;
+  }
+  .v-input__slot{
+    margin: 0;
+    min-height: auto;
+    padding: 0!important;
+    &:before, &:after{
+      content: none;
+    }
+  }
+  fieldset{
+    margin: 0;
+    padding: 0;
+    border: none;
+    top: 0;
+  }
+  .v-select__slot{
+    height: 32px;
+    align-items: center;
+  }
+  .v-select__selections{
+    max-width: 100%;
+    margin: 0;
+    padding: 8px 12px!important;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: $card-title-color;
+    input{
+      display: none;
+    }
+  }
+  .v-input__append-inner{
+    margin-top: 0;
+    align-self: center;
+  }
+  .v-select__selection--comma{
+    margin: 0;
+  }
+}

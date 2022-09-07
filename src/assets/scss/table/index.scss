@@ -1,0 +1,18 @@
+@import "../vars";
+@import "../mixins";
+
+.tableHeader{
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  .v-card{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .v-input{
+    max-width: 232px;
+    width: 100%;
+    @include inputMixin;
+  }
+}

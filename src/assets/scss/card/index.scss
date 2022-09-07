@@ -1,0 +1,16 @@
+@import "../vars";
+@import "../mixins";
+
+.card{
+  background: #FFFFFF;
+  box-shadow: none;
+  padding: 8px 16px 16px 16px;
+  &-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $card-title-color;
+    margin-bottom: 24px;
+  }
+}
