@@ -33,6 +33,7 @@
 </template>
 
 <script>
+
 export default {
   data: () => ({
     sortTypes: [
@@ -44,11 +45,14 @@ export default {
         value: 'lower',
       }],
     sortType: '',
-    viewType: null,
+    viewType: 'table',
   }),
   watch: {
     sortType(val) {
       this.$store.commit('tableData/setSortedTableData', val);
+    },
+    viewType(val) {
+      this.$store.commit('setViewType', val);
     },
   },
 };

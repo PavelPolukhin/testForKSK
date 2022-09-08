@@ -65,6 +65,10 @@ export default {
       const sortedTableData = state.filteredTableData.sort(sortTableFromNumber);
       state.filteredTableData = val === 'up' ? sortedTableData : sortedTableData.reverse();
     },
+    deleteItem(state, id) {
+      state.filteredTableData = state.filteredTableData.filter((item) => item.id !== id);
+      state.tableData = state.tableData.filter((item) => item.id !== id);
+    },
   },
   getters: {
     getTableHeaders: (state) => state.tableHeaders,

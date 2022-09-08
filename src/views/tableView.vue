@@ -8,7 +8,8 @@
          </v-col>
          <v-col cols="9">
            <table-header/>
-           <table-app/>
+           <table-app v-if="viewType === 'table'"/>
+           <row-view-data v-else/>
          </v-col>
        </v-row>
      </div>
@@ -23,10 +24,13 @@
 import TableFilter from '@/components/table/tableFilter.vue';
 import TableHeader from '@/components/table/tableHeader.vue';
 import TableApp from '@/components/table/tableApp.vue';
-import { mapActions } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
+import RowViewData from '@/components/table/rowViewData.vue';
 
 export default {
-  components: { TableApp, TableHeader, TableFilter },
+  components: {
+    RowViewData, TableApp, TableHeader, TableFilter,
+  },
   methods: {
     ...mapActions('tableData', ['getTableData']),
     async loadTableData() {
@@ -35,6 +39,11 @@ export default {
   },
   mounted() {
     this.loadTableData();
+  },
+  computed: {
+    ...mapGetters({
+      viewType: 'getViewType',
+    }),
   },
 };
 </script>
